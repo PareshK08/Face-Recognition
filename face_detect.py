@@ -1,6 +1,6 @@
 import cv2 as cv
 
-img =cv.imread(r'D:\Img\Train\Sachin Tendulkar\25.jpg')
+img =cv.imread(r'{Enter path of Image}')
 img = cv.resize(img,(500,500))
 #cv.imshow('Group',img)
 
