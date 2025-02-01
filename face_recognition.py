@@ -3,7 +3,9 @@ import cv2 as cv
 
 haar_cascade = cv.CascadeClassifier('haar_face.xml')
 
-People = ['Abhay', 'Arigit Singh','Paresh', 'RDJ', 'Sachin Tendulkar']
+People = []
+for i in os.listdir(DIR):
+    People.append(i)
 
 #features = np.load('features.npy')
 #labels = np.load('labels.npy')
@@ -12,7 +14,7 @@ face_recoginizer = cv.face.LBPHFaceRecognizer_create()
 
 face_recoginizer.read('face_trained.yml')
 
-img = cv.imread(r'D:\Img\Test\Sachin.jpg')
+img = cv.imread(r'{Enter path of testing Image }')
 img = cv.resize(img,(500,500))
 gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 #cv.imshow('Person',gray)
