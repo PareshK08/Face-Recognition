@@ -4,10 +4,10 @@ import numpy as np
 
 haar_cascade = cv.CascadeClassifier('haar_face.xml')
 
-People = ['Abhay', 'Arigit Singh','Paresh', 'RDJ', 'Sachin Tendulkar']
-DIR = r'D:\Img\Train'
-#for i in os.listdir(DIR):
-#    People.append(i)
+People = []
+DIR = r'{Enter Path of Training image folder}'
+for i in os.listdir(DIR):
+    People.append(i)
 
 features =[]
 labels = []
