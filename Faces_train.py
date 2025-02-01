@@ -2,6 +2,10 @@ import os
 import cv2 as cv
 import numpy as np 
 
+
+# try to gather images with same dimentions (Ex : 800 X 800 ) .
+# Face in training image should be vesible clearly .  
+
 haar_cascade = cv.CascadeClassifier('haar_face.xml')
 
 People = []
@@ -20,7 +24,7 @@ def create_train():
             img_path = os.path.join(path,img)
             
             img_array = cv.imread(img_path)
-            img_array=cv.resize(img_array,(500,600))
+            img_array=cv.resize(img_array,(500,500))
             gray = cv.cvtColor(img_array,cv.COLOR_BGR2GRAY)
             
             face_rect = haar_cascade.detectMultiScale(gray,scaleFactor=1.4,minNeighbors=4)
