@@ -1,3 +1,7 @@
+# Check Your Image with this program . 
+# Thais program will show you face is detecting or not in training image .
+# It will show one image at a time
+
 import cv2 as cv
 
 img =cv.imread(r'{Enter path of Image}')
